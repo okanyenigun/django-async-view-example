@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content%}
+<div class="container">
+  <form method="POST">
+    {% csrf_token %}
+    <input
+      type="number"
+      min="1"
+      placeholder="N"
+      name="n"
+      class="form-control"
+    />
+    <button name="submit" class="btn btn-success">Generate Records</button>
+  </form>
+</div>
+{% endblock %}
